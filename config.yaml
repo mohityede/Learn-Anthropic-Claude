@@ -1,0 +1,13 @@
+general_settings:
+  master_key: sk-1234
+  allow_requests_on_db_unavailable: true
+model_list:
+  - model_name: gemini
+    litellm_params:
+      model: gemini/gemini-2.5-flash
+      api_key: os.environ/GEMINI_API_KEY
+
+  - model_name: local
+    litellm_params:
+      model: ollama/gemma3:270m
+      api_base: http://localhost:11434
