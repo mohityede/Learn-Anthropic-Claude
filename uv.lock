@@ -1071,12 +1071,14 @@ source = { virtual = "." }
 dependencies = [
     { name = "anthropic" },
     { name = "litellm", extra = ["proxy"] },
+    { name = "python-dotenv" },
 ]
 
 [package.metadata]
 requires-dist = [
     { name = "anthropic", specifier = ">=0.120.0" },
     { name = "litellm", extras = ["proxy"], specifier = ">=1.93.0" },
+    { name = "python-dotenv", specifier = ">=1.2.2" },
 ]
 
 [[package]]
