@@ -1,6 +1,7 @@
 from anthropic import Anthropic
 from dotenv import load_dotenv
 import os
+from Building_with_the_Claude_API import chat_exercise
 
 load_dotenv()
 
@@ -11,7 +12,7 @@ client = Anthropic(
 
 def test_llm_call(message):
     response = client.messages.create(
-        model="gemini",
+        model="local",
         max_tokens=1000,
         messages=[
             {
@@ -25,8 +26,8 @@ def test_llm_call(message):
 
 def main():
     print("Hello from learn-anthropic-claude!")
-    test_llm_call("Explain vector databases in one sentence")
-    
+    # test_llm_call("Explain vector databases in one sentence")
+    chat_exercise.chat_exercise(client)
 
 
 if __name__ == "__main__":
