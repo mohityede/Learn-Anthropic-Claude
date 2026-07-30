@@ -27,7 +27,9 @@ def test_llm_call(message):
 def main():
     print("Hello from learn-anthropic-claude!")
     # test_llm_call("Explain vector databases in one sentence")
-    chat_exercise.chat_exercise(client)
+    # chat_exercise.chat_exercise(client)
+    # chat_exercise.call_llm_stream(client)
+    chat_exercise.get_structured_output(client)
 
 
 if __name__ == "__main__":
